@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Submit to Google Sheet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #fbb115;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e0a30d;
+    }
+    .message {
+      margin-top: 15px;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="text-align: center;">
+        <img src="https://vipstech.in/asset/image/VIPS.Tech.svg" alt="VIPS.Tech Logo" style="max-width: 200px; margin-bottom: 15px;" />
+    </div>
+    <center><h2>Attendance Form</h2></center>
+
+    <!-- ✅ Replace the action URL with your Web App URL -->
+    <form method="POST" action="https://script.google.com/macros/s/AKfycbxQ214kkkmwT5sLhvCIjZNX9kJm2ooY28_AvO5mLJj2_d256ow5ckHnpgLrTDAkGU8d/exec">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="department">Department:</label>
+          <input type="text" id="department" name="department" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phonenumber">Phone Number:</label>
+          <input type="text" id="phonenumber" name="phonenumber" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="message" id="responseMessage">You will be redirected after submission.</div>
+</div>
+
+</body>
+</html>
